@@ -1,3 +1,14 @@
+type TodoItem = record {
+    assignee: text;
+    description: text;
+    duration: nat32;
+}
+
+
 service : {
-    "greet": (text) -> (text) query;
+    "fetch_all": () -> (opt vec record { nat64; TodoItem } ) query;
+    "get" : (nat64) -> (opt TodoItem);
+    "create": (nat64, TodoItem) -> (opt TodoItem);
+    "update": (nat64, TodoItem) -> (opt TodoItem);
+    "delete": (nat64) -> (opt TodoItem);
 }
