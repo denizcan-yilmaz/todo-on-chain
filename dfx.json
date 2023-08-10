@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "todoList_backend": {
+      "candid": "src/todoList_backend/todoList_backend.did",
+      "package": "todoList_backend",
+      "type": "rust"
+    },
+    "todoList_frontend": {
+      "dependencies": [
+        "todoList_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/todoList_frontend/src/index.html"
+      },
+      "source": [
+        "src/todoList_frontend/assets",
+        "dist/todoList_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
