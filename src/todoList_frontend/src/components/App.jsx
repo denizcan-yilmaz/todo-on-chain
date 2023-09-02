@@ -7,12 +7,10 @@ import TodoForm from "../components/TodoForm";
 import TodoList from "../components/TodoList";
 import { APIManager } from "../helpers/APIManager";
 import "../index.css";
-
 import { createClient } from "@connect2ic/core";
 import { defaultProviders } from "@connect2ic/core/providers";
 import { ConnectDialog, Connect2ICProvider } from "@connect2ic/react";
 import { useBalance, useWallet } from "@connect2ic/react";
-
 import "@connect2ic/core/style.css";
 import * as todoCanister from "../../../../.dfx/local/canisters/todoList_backend";
 
@@ -34,7 +32,9 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <ConnectDialog />
+      <div className="App">
+        <ConnectDialog />
+      </div>
       <TodoList
         setEditModal={setEditModal}
         showModal={showModal}

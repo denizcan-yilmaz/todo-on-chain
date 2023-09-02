@@ -13,7 +13,15 @@ const Navbar = () => {
           Todo on Chain
         </h1>
         <div className="connect-btn">
-          <ConnectButton />
+          <ConnectButton
+            style={{
+              padding: "10px",
+              backgroundColor: "white",
+              color: "#7929bb",
+              borderRadius: "10px",
+              cursor: "pointer",
+            }}
+          />
         </div>
       </div>
     </nav>
