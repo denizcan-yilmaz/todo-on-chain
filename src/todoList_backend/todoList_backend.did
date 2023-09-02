@@ -2,6 +2,8 @@ type TodoItem = record {
     assignee: text;
     description: text;
     duration: nat32;
+    is_active: bool;
+    updated_at: text;
 }
 
 

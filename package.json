@@ -17,20 +17,30 @@
     "generate": "dfx generate todoList_backend"
   },
   "dependencies": {
+    "@connect2ic/core": "^0.2.0-beta.5",
+    "@connect2ic/react": "^0.2.0-beta.5",
     "@dfinity/agent": "^0.18.1",
     "@dfinity/candid": "^0.18.1",
-    "@dfinity/principal": "^0.18.1"
+    "@dfinity/principal": "^0.18.1",
+    "initialize-css": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "assert": "2.0.0",
     "buffer": "6.0.3",
     "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
     "dotenv": "^16.0.3",
     "events": "3.3.0",
     "html-webpack-plugin": "5.5.0",
     "process": "0.11.10",
     "stream-browserify": "3.0.0",
+    "style-loader": "^3.3.3",
     "terser-webpack-plugin": "^5.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
     "util": "0.12.4",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",

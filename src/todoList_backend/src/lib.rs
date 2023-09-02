@@ -15,6 +15,8 @@ struct TodoItem {
     assignee: String,
     description: String,
     duration: u32,
+    is_active: bool,
+    updated_at: String,
 }
 
 impl Storable for TodoItem {
