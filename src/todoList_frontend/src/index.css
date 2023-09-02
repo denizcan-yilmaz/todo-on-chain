@@ -26,6 +26,10 @@ body {
   justify-content: center;
 }
 
+.connect-btn {
+  float: right;
+}
+
 .header h1 {
   font-size: large;
   color: #ffffff;

@@ -1,4 +1,5 @@
 import React from "react";
+import { ConnectButton } from "@connect2ic/react";
 
 const Navbar = () => {
   return (
@@ -11,6 +12,9 @@ const Navbar = () => {
         >
           Todo on Chain
         </h1>
+        <div className="connect-btn">
+          <ConnectButton />
+        </div>
       </div>
     </nav>
   );
