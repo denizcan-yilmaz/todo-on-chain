@@ -15,16 +15,11 @@ const TodoList = ({
 }) => {
   const [fetchedData, setFetchedData] = useState([]);
 
-  useEffect(() => {
-    console.log(fetchedData);
-  }, [fetchedData]);
-
   const handleDelete = (e) => {
     const tr = e.target.closest("tr");
     const key = tr.getAttribute("data-key");
     setIsLoading(true);
     APIManager.delete(Number(key)).then((res) => {
-      console.log(res);
       setRefreshData((prev) => !prev);
       setIsLoading(false);
     });
@@ -33,7 +28,6 @@ const TodoList = ({
   useEffect(() => {
     APIManager.fetchAll().then((res) => {
       setFetchedData(res);
-      console.log(res);
     });
   }, [refreshData]);
 
@@ -66,7 +60,6 @@ const TodoList = ({
             </thead>
             <tbody>
               {fetchedData?.[0].map((d) => {
-                console.log("d: ", d);
                 return (
                   <tr key={d[0]} data-key={d[0]}>
                     <td>{d[1].is_active ? "Not Done" : "Done"}</td>

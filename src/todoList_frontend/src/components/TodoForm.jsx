@@ -32,7 +32,6 @@ const TodoForm = ({
   const [duration, setDuration] = useState(10);
 
   const handleSubmit = () => {
-    console.log("submit: ", isActive);
     setIsLoading(true);
     APIManager.create(getRandomInt(1, 100000), {
       assignee: assignee,

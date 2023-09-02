@@ -11,10 +11,6 @@ const TodoEdit = ({
 }) => {
   if (!editModal) return;
 
-  useEffect(() => {
-    console.log("selected item: ", selectedItem);
-  }, [selectedItem]);
-
   function getCurrentDate() {
     const currentDate = new Date();
 
